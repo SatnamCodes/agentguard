@@ -4,7 +4,10 @@ import os
 
 os.makedirs("src/data", exist_ok=True)
 
-dataset = load_dataset("Anthropic/hh-rlhf", "red-team-attempts")
+dataset = load_dataset(
+    "Anthropic/hh-rlhf",
+    data_dir="red-team-attempts",
+)
 train_data = dataset['train']
 
 traces = []
